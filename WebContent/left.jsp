@@ -14,7 +14,7 @@
 			/* ------- nav ------- */
 		#nav {
 			float:left;
-			width:190px;
+			width:250px;
 		}
 
 		#nav li {
@@ -34,10 +34,11 @@
 			display:block;
 			height: 40px;
 			line-height: 40px;
-			text-indent:15px;
+			text-indent:25px;
+			text-decoration:none;
 			background-color:#F5F5F5;
 			border-right:10px solid #0D9BE5;
-			font-size:12px;
+			font-size:15px;
 			color: #164158;
 		}
 
@@ -165,35 +166,36 @@
 					<li class="color-blue">
 						<div class="main">课程管理</div>
 						<ul class="subs"> 
-							<li><a href="test.html">增加课程</a></li> 
-							<li><a href="test.html">删除课程</a></li> 
-							<li><a href="test.html">更改课程</a></li> 
-							<li><a href="test.html">查找课程</a></li>
+							<li><a href="#">增加课程</a></li> 
+							<li><a href="#">删除课程</a></li> 
+							<li><a href="#">更改课程</a></li> 
+							<li><a href="#">查找课程</a></li>
 						</ul> 
 					</li> 
 					<li class="color-red">
 						<div class="main">教师信息</div>
 						<ul class="subs"> 
-							<li><a href="test.html"></a></li> 
-							<li><a href="test.html">床</a></li> 
-							<li><a href="test.html">桌子</a></li> 
-							<li><a href="test.html">椅子</a></li> 
+							<li><a href="#">教师信息增加</a></li> 
+							<li><a href="#">教师信息删除</a></li> 
+							<li><a href="#">教师信息更改</a></li> 
+							<li><a href="#">教师信息查找</a></li> 
 						</ul> 
 					</li>
 					<li class="color-yellow">
-						<div class="main">文具</div>
+						<div class="main">学生信息</div>
 						<ul class="subs"> 
-							<li><a href="test.html">原子筆˙鉛筆</a></li> 
-							<li><a href="test.html">筆記本</a></li> 
-							<li><a href="test.html">資料夾</a></li> 
+							<li><a href="#">学生信息增加</a></li> 
+							<li><a href="#">学生信息删除</a></li> 
+							<li><a href="#">学生信息更改</a></li>
+							<li><a href="#">学生信息查找</a></li>  
 						</ul> 
 					</li>
 					<li class="color-green">
-						<div class="main">生活雜貨</div>
+						<div class="main">汇总</div>
 						<ul class="subs"> 
-							<li><a href="test.html">廚房用品</a></li> 
-							<li><a href="test.html">掃除˙洗滌用品</a></li> 
-							<li><a href="test.html">浴室˙廁所用品</a></li> 
+							<li><a href="#">其他</a></li> 
+							<li><a href="#">其他</a></li> 
+							<li><a href="#">其他</a></li> 
 						</ul> 
 					</li> 
 				</ul>
