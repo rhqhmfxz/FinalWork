@@ -2,6 +2,7 @@
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
+<!-- 设计完毕,勿动!!! -->
 	<head>
 		<style type="text/css">
 			/* ------- wrapper ------- */
@@ -33,7 +34,7 @@
 			display:block;
 			height: 40px;
 			line-height: 40px;
-			text-indent:25px;
+			text-indent:15px;
 			background-color:#F5F5F5;
 			border-right:10px solid #0D9BE5;
 			font-size:12px;
@@ -162,18 +163,18 @@
 			<div id="nav">
 				<ul> 
 					<li class="color-blue">
-						<div class="main">信息管理</div>
+						<div class="main">课程管理</div>
 						<ul class="subs"> 
-							<li><a href="test.html">外套</a></li> 
-							<li><a href="test.html">襯衣</a></li> 
-							<li><a href="test.html">褲子</a></li> 
-							<li><a href="test.html">飾品</a></li>
+							<li><a href="test.html">增加课程</a></li> 
+							<li><a href="test.html">删除课程</a></li> 
+							<li><a href="test.html">更改课程</a></li> 
+							<li><a href="test.html">查找课程</a></li>
 						</ul> 
 					</li> 
 					<li class="color-red">
-						<div class="main">家具˙室內裝飾</div>
+						<div class="main">教师信息</div>
 						<ul class="subs"> 
-							<li><a href="test.html">沙發</a></li> 
+							<li><a href="test.html"></a></li> 
 							<li><a href="test.html">床</a></li> 
 							<li><a href="test.html">桌子</a></li> 
 							<li><a href="test.html">椅子</a></li> 
