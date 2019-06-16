@@ -162,7 +162,7 @@
 			<div id="nav">
 				<ul> 
 					<li class="color-blue">
-						<div class="main">時尚</div>
+						<div class="main">信息管理</div>
 						<ul class="subs"> 
 							<li><a href="test.html">外套</a></li> 
 							<li><a href="test.html">襯衣</a></li> 
