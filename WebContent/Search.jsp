@@ -17,5 +17,6 @@
 		<input type="submit" value="按课程学分查看"/>
 		<input type="submit" value="按考核方式查看"/> 
 	</form>
+	<%=session.getAttribute("userName") %>
 </body>
 </html>

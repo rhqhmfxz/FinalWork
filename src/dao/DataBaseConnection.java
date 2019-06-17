@@ -5,7 +5,7 @@ import java.sql.*;
 //实现数据库的连接与打开
 public class DataBaseConnection {
 	//定义数据库驱动类 
-    private final String DBDRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriverriver" ;
+    private final String DBDRIVER = "com.microsoft.sqlserver.jdbc.SQLServerDriverriver";
     //定义数据库连接URL  
     private final String DBURL = "jdbc:sqlserver://localhost:1433;Database=courseSystem";
     //定义数据库连接用户名

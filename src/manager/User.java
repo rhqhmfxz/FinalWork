@@ -1,4 +1,4 @@
-package dao;
+package manager;
 
 public class User {
 	//定义用户的昵称
@@ -6,6 +6,7 @@ public class User {
 	//定义用户的密码
 	private String userPassWord;
 	//构造方法初始化用户
+	public User() {}
 	public User(String userName,String userPassWord)
 	{
 		this.userName = userName;
