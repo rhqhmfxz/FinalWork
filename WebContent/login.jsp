@@ -40,7 +40,6 @@
 				pageContext.forward("login.jsp");
 			}
 		}
-		
 	%>
 </body>
 </html>
