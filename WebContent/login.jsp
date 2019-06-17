@@ -17,8 +17,6 @@
 		<input type="submit" value="登录"/>
 	</form>
 	<%
-		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html;charset=utf-8");
 		//获取用户输入的用户名
 		String userName = request.getParameter("userName");
 		//获取用户输入的用户密码
