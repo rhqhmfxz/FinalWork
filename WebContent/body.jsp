@@ -9,10 +9,7 @@
 <body>
 	<jsp:include page="top.jsp"></jsp:include>
 	<jsp:include page="left.jsp"></jsp:include>
-	<!-- 设置下面的CSS -->
-	<div>
-		课程查询：<input type="text"/>
-		<input type="submit"/>
-	</div>
+	<!-- 设置下面的CSS，div的文字可以更换为图片 -->
+	<div>欢迎使用本系统</div>
 </body>
 </html>

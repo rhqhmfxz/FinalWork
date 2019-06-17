@@ -8,7 +8,8 @@
 </head>
 <body>
 <!-- 设置下面的CSS -->
-	<form>
+	<div>欢迎登录</div>
+	<form method="post">
 		用户名:<input type="text"/><br/>
 		密&nbsp;码:<input type="password"/>
 		<input type="submit" value="登录"/>
