@@ -164,38 +164,35 @@
 			<div id="nav">
 				<ul> 
 					<li class="color-blue">
-						<div class="main">课程管理</div>
+						<div class="main">课程信息查看</div>
 						<ul class="subs"> 
-							<li><a href="#">增加课程</a></li> 
-							<li><a href="#">删除课程</a></li> 
-							<li><a href="#">更改课程</a></li> 
-							<li><a href="#">查找课程</a></li>
+							<li><a href="QueryById.jsp">按课程编号查看</a></li> 
+							<li><a href="QueryByName.jsp">按课程名称查看</a></li> 
+							<li><a href="sortByTime.jsp">按开课学期排序</a></li> 
+							<li><a href="sortByScore.jsp">按课程学分排序</a></li>
+							<li><a href="sortByExam.jsp">按考核方式排序</a></li>
 						</ul> 
 					</li> 
 					<li class="color-red">
-						<div class="main">教师信息</div>
+						<div class="main">课程信息管理</div>
 						<ul class="subs"> 
-							<li><a href="#">教师信息增加</a></li> 
-							<li><a href="#">教师信息删除</a></li> 
-							<li><a href="#">教师信息更改</a></li> 
-							<li><a href="#">教师信息查找</a></li> 
+							<li><a href="Add.jsp">课程信息增加</a></li> 
+							<li><a href="Update.jsp">课程信息更新</a></li> 
+							<li><a href="Delete.jsp">课程信息删除</a></li> 
 						</ul> 
 					</li>
 					<li class="color-yellow">
-						<div class="main">学生信息</div>
+						<div class="main">信息汇总</div>
 						<ul class="subs"> 
-							<li><a href="#">学生信息增加</a></li> 
-							<li><a href="#">学生信息删除</a></li> 
-							<li><a href="#">学生信息更改</a></li>
-							<li><a href="#">学生信息查找</a></li>  
+							<li><a href="#">学时统计表</a></li> 
+							<li><a href="#">学分统计表</a></li>  
 						</ul> 
 					</li>
 					<li class="color-green">
-						<div class="main">汇总</div>
+						<div class="main">帐户设置</div>
 						<ul class="subs"> 
-							<li><a href="#">其他</a></li> 
-							<li><a href="#">其他</a></li> 
-							<li><a href="#">其他</a></li> 
+							<li><a href="#">更换用户</a></li> 
+							<li><a href="#">修改密码</a></li> 
 						</ul> 
 					</li> 
 				</ul>

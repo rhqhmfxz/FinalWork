@@ -9,10 +9,11 @@ public class UserDao {
 	//按用户姓名进行用户信息查询
 	public User queryByName(String userName) {
 		User user = null; 
+		//定义SQL查询语句
 		String sql = "SELECT * FROM manager WHERE userName=?";
 		PreparedStatement pstmt = null;
 		DataBaseConnection dbc = null;
-		 // 下面是针对数据库的具体操作
+		//下面是针对数据库的具体操作
 		try {
 			 // 连接数据库 
 			 dbc = new DataBaseConnection();
@@ -26,7 +27,6 @@ public class UserDao {
 	        	 user.setUserName(rs.getString(2));
 	        	 user.setUserPassWord(rs.getString(3));
 	         }
-	         //System.out.println(user.getUserName() + "   " + user.getUserPassWord());
 	         rs.close();  
              pstmt.close();
 		}catch(Exception e) {

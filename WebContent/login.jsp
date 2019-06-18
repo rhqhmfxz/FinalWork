@@ -33,7 +33,7 @@
 			if(userName.equals(user.getUserName()) && userPassWord.equals(user.getUserPassWord())){
 				//保存登录信息
 				session.setAttribute("userName", userName);
-				pageContext.forward("Search.jsp");
+				pageContext.forward("QueryById.jsp");
 			}else{
 				pageContext.forward("login.jsp");
 			}
