@@ -221,6 +221,46 @@ public class CourseDao {
 	    }
 			return examSet;
 	}
+	
+	//查询所有的课程信息用于计算学时和学分比例
+	public List<Course> queryAll(){
+		 List<Course> all = new ArrayList<Course>();  
+	     String sql = "SELECT * FROM course";  
+	     PreparedStatement pstmt = null;  
+	     DataBaseConnection dbc = null;  
+	     //下面是针对数据库的具体操作  
+	     try{  
+	    	 //连接数据库  
+	         dbc = new DataBaseConnection();  
+	         pstmt = dbc.getConnection().prepareStatement(sql);   
+	         //进行数据库查询操作  
+	         ResultSet rs = pstmt.executeQuery();  
+	         while(rs.next()){  
+	        	 //查询出内容，之后将查询出的内容赋值给user对象  
+	             Course course = new Course();  
+	             course.setCourseId(rs.getString(1));    
+	             course.setCourseName(rs.getString(2));
+	             course.setCourseScore(rs.getString(3));
+	             course.setCourseTheory(rs.getString(4));
+	             course.setCourseTest(rs.getString(5));
+	             course.setCourseTime(rs.getString(6));
+	             course.setCourseKind(rs.getString(7));
+	             course.setCourseNature(rs.getString(8));
+	             course.setCourseExam(rs.getString(9));
+	             course.setCourseCollege(rs.getString(10));
+	             //将查询出来的数据加入到List对象之中  
+	             all.add(course);  
+	     }  
+	     rs.close() ;  
+	     pstmt.close() ;  
+	     }catch (Exception e){  
+	    	 System.out.println("操作出现异常," + e);
+	     }finally{  
+	    	 //关闭数据库连接  
+	         dbc.close();  
+	     }  
+	     return all;  
+	}
 /*------------------------------------------------------------------------------------*/
 	//添加操作
 	public boolean Add(Course course) {

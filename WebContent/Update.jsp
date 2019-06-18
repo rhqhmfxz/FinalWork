@@ -12,17 +12,51 @@
 <head>
 <meta charset="UTF-8">
 <title>课程信息更改</title>
+<style type="text/css">
+body{
+    background: url("images/sbg.jpg") no-repeat fixed;
+    /* set background tensile */
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.left{
+	width:430px;
+	/*border: 3px solid blue;*/
+	float:left;
+}
+
+.formDiv{
+	width: 600px;
+	height: 50px;
+	float: left;
+	margin-top: 80px;
+	margin-left: 10px;
+}
+
+.formDiv input{
+	margin-left: 10px;
+}
+</style>
 </head>
 <body>
-	<jsp:include page="top.jsp"></jsp:include>
-	<jsp:include page="left.jsp"></jsp:include>
+	<div style="margin-top: 30px;">
+		<jsp:include page="top.jsp"></jsp:include>
+	</div>
+	<div class="left">
+		<jsp:include page="left.jsp"></jsp:include>
+	</div>
 		<%
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		//判断是否为合法用户
 		Object sess = session.getAttribute("userName");
 		if(sess == null){
-			response.sendRedirect("../login.jsp");
+			//跳转回登录页面
+			response.sendRedirect("login.jsp");
 		}
 		String courseId = request.getParameter("courseId");
 		String courseName = request.getParameter("courseName");
@@ -89,10 +123,14 @@
 	            pstmt.setString(8, to.CTOEOfExam(courseExam));
 	            pstmt.setString(9, to.CTOEOfCollege(courseCollege));
 	            pstmt.setString(10, courseId);
-	            //进行数据库更新操作  
-	            int result = pstmt.executeUpdate();
-	            if(result > 0) {
-	            	out.print("修改成功!");
+	            //进行数据库更新操作 
+	            if(courseId != null){
+	            	int result = pstmt.executeUpdate();
+	            	if(result > 0) {
+		            	 out.println("<script>alert('更新成功！');history.go(-1);</script>");
+		            }else{
+		            	out.println("<script>alert('更新失败！');history.go(-1);</script>");
+		            }
 	            }
 	            pstmt.close(); 
 	        }catch (Exception e) {
@@ -103,19 +141,20 @@
 			}
 		}
 		%>
-	<form method="post">
-		课程编号:<input type="text" name="courseId" value="<%= courseId%>"/><br/>
-		课程名称:<input type="text" name="courseName" value="<%= courseName%>"/><br/>
-		课程学分:<input type="text" name="courseScore" value="<%= courseScore%>"/><br/>
-		理论学时:<input type="text" name="courseTheory" value="<%= courseTheory%>"/><br/>
-		实验学时:<input type="text" name="courseTest" value="<%= courseTest%>"/><br/>
-		开课学期:<input type="text" name="courseTime" value="<%= courseTime%>"/><br/>
-		课程类别:<input type="text" name="courseKind" value="<%= courseKind%>"/><br/>
-		课程性质:<input type="text" name="courseNature" value="<%= courseNature%>"/><br/>
-		考核方式:<input type="text" name="courseExam" value="<%= courseExam%>"/><br/>
-		承担单位:<input type="text" name="courseCollege" value="<%= courseCollege%>"/><br/>
-		<input type="submit" value="更新"/>
-	</form>
-	
+	<div class="formDiv">
+		<form method="post">
+			课程编号:<input type="text" name="courseId" value="<%= courseId%>"/>&nbsp;&nbsp;&nbsp;
+			课程名称:<input type="text" name="courseName" value="<%= courseName%>"/><br/><br/>
+			课程学分:<input type="text" name="courseScore" value="<%= courseScore%>"/>&nbsp;&nbsp;&nbsp;
+			理论学时:<input type="text" name="courseTheory" value="<%= courseTheory%>"/><br/><br/>
+			实验学时:<input type="text" name="courseTest" value="<%= courseTest%>"/>&nbsp;&nbsp;&nbsp;
+			开课学期:<input type="text" name="courseTime" value="<%= courseTime%>"/><br/><br/>
+			课程类别:<input type="text" name="courseKind" value="<%= courseKind%>"/>&nbsp;&nbsp;&nbsp;
+			课程性质:<input type="text" name="courseNature" value="<%= courseNature%>"/><br/><br/>
+			考核方式:<input type="text" name="courseExam" value="<%= courseExam%>"/>&nbsp;&nbsp;&nbsp;
+			承担单位:<input type="text" name="courseCollege" value="<%= courseCollege%>"/><br/><br/>
+			<input type="submit" value="更新"/>
+		</form>
+	</div>
 </body>
 </html>

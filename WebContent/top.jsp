@@ -2,6 +2,20 @@
     pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
-	<!-- 设置下面的CSS -->
-	<span>专业人才培养方案课程管理系统</span>
+<head>
+<style type="text/css">
+
+.press {
+	color: transparent;
+	background-color : black;
+	text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+	-webkit-background-clip : text;
+	font-size: 50px;
+}
+
+</style>
+</head>
+<body>
+	<span class="press">课程管理系统</span>
+</body>
 </html>
