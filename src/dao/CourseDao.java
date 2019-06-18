@@ -5,6 +5,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sun.scenario.effect.Blend;
+
 import manager.Course;
 
 public class CourseDao {
@@ -220,5 +222,62 @@ public class CourseDao {
 			return examSet;
 	}
 /*------------------------------------------------------------------------------------*/
-	
+	//添加操作
+	public boolean Add(Course course) {
+		String sql = "INSERT INTO course VALUES(?,?,?,?,?,?,?,?,?,?)" ;
+		PreparedStatement pstmt = null;  
+	    DataBaseConnection dbc = null;
+	    //对数据进行转化
+		CTOE to = new CTOE();
+	    //下面是针对数据库的具体操作  
+	    try{  
+	    	//连接数据库  
+	        dbc = new DataBaseConnection();  
+	        pstmt = dbc.getConnection().prepareStatement(sql);
+	        pstmt.setString(1, course.getCourseId());
+	        pstmt.setString(2, course.getCourseName());
+	        pstmt.setString(3, course.getCourseScore());
+	        pstmt.setString(4, course.getCourseTheory());
+	        pstmt.setString(5, course.getCourseTest());
+	        pstmt.setString(6, course.getCourseTime());
+	        pstmt.setString(7, to.CTOEOfKind(course.getCourseKind()));
+	        pstmt.setString(8, to.CTOEOfNature(course.getCourseNature()));
+	        pstmt.setString(9, to.CTOEOfExam(course.getCourseExam()));
+	        pstmt.setString(10, to.CTOEOfCollege(course.getCourseCollege()));
+	        //进行数据库更新操作  
+            pstmt.executeUpdate();  
+            pstmt.close();
+            return true;
+	    }catch (Exception e) {
+			System.out.println("操作出现异常," + e);
+		}finally {
+			 //关闭数据库连接  
+            dbc.close();  
+		}
+		return false;
+	}
+	/*------------------------------------------------------------------------------------*/
+	//删除操作
+	public boolean Delete(String courseId) {
+		String sql = "DELETE FROM course WHERE courseId=?";
+		PreparedStatement pstmt = null;  
+        DataBaseConnection dbc = null;  
+        //下面是针对数据库的具体操作  
+        try{  
+            //连接数据库  
+            dbc = new DataBaseConnection();  
+            pstmt = dbc.getConnection().prepareStatement(sql);           
+            pstmt.setString(1,courseId) ;  
+            // 进行数据库更新操作  
+            pstmt.executeUpdate();
+            pstmt.close();
+            return true;
+        }catch (Exception e){  
+        	System.out.println("操作出现异常," + e) ;  
+        }finally{  
+            //关闭数据库连接  
+            dbc.close();  
+        }  
+        return false;
+    }  
 }

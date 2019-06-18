@@ -13,7 +13,7 @@
 	<div>欢迎登录</div>
 	<form method="post">
 		用户名:<input type="text" name="userName"/><br/>
-		密&nbsp;码:<input type="password" name="userPassWord"/>
+		密&nbsp;码:<input type="password" name="userPassWord"/><br/>
 		<input type="submit" value="登录"/>
 	</form>
 	<%
@@ -33,9 +33,9 @@
 			if(userName.equals(user.getUserName()) && userPassWord.equals(user.getUserPassWord())){
 				//保存登录信息
 				session.setAttribute("userName", userName);
-				pageContext.forward("QueryById.jsp");
+				response.sendRedirect("QueryById.jsp");
 			}else{
-				pageContext.forward("login.jsp");
+				response.sendRedirect("login.jsp");
 			}
 		}
 	%>

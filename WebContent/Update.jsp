@@ -19,6 +19,11 @@
 		<%
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
+		//判断是否为合法用户
+		Object sess = session.getAttribute("userName");
+		if(sess == null){
+			response.sendRedirect("../login.jsp");
+		}
 		String courseId = request.getParameter("courseId");
 		String courseName = request.getParameter("courseName");
 		String courseScore = request.getParameter("courseScore");
