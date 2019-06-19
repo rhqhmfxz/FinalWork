@@ -5,8 +5,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.scenario.effect.Blend;
-
 import manager.Course;
 
 public class CourseDao {
@@ -284,7 +282,7 @@ public class CourseDao {
 	        pstmt.setString(8, to.CTOEOfNature(course.getCourseNature()));
 	        pstmt.setString(9, to.CTOEOfExam(course.getCourseExam()));
 	        pstmt.setString(10, to.CTOEOfCollege(course.getCourseCollege()));
-	        //进行数据库更新操作  
+	        //进行数据库更新操作
             pstmt.executeUpdate();  
             pstmt.close();
             return true;

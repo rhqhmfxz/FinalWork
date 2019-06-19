@@ -23,9 +23,22 @@ body{
     text-align: center;
 }
 
-a{
-	text-decoration: none;
+.tda{
 	color:black;
+	display:block;
+	width:35px;
+	height:20px;
+	margin:auto;
+}
+
+.tda:link, .tda:visited{
+	text-decoration:none; 
+	background-color: #6B6854;
+	color:white;
+} 
+
+.tda:hover{
+	background-color: orange;
 }
 
 .left{
@@ -42,6 +55,7 @@ a{
 	margin-right:auto;
 	/*border: 3px solid red;*/
 }
+
 
 #tabDiv{
 	width: 900px;
@@ -84,7 +98,7 @@ table tr:nth-child(even){
 		
 	<div class="right">
 		<form method="post">
-			请输入课程编号:<input type="text" name="info"/>
+			请输入课程编号:&nbsp;&nbsp;&nbsp;<input type="text" name="info"/>
 			<input type="submit" value="查询"/> 
 		</form>
 	</div>
@@ -117,7 +131,7 @@ table tr:nth-child(even){
 				course.getCourseTest() + "</td><td>" + course.getCourseTime() +"</td><td>" + 
 				eqCourse.equalsKind(course.getCourseKind()) + "</td><td>" + eqCourse.equalsNature(course.getCourseNature()) +
 				"</td><td>" + eqCourse.equalsExam(course.getCourseExam()) + "</td><td>" + 
-				eqCourse.equalsCollege(course.getCourseCollege()) + "</td><td><a href='Update.jsp?courseId="+ course.getCourseId() +"'/>修改</td></tr>");
+				eqCourse.equalsCollege(course.getCourseCollege()) + "</td><td><a href='Update.jsp?courseId="+ course.getCourseId() +"' class='tda'/>修改</td></tr>");
 			}
 			out.print("</table></div>");
 		%>

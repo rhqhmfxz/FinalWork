@@ -11,6 +11,7 @@
 	text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
 	-webkit-background-clip : text;
 	font-size: 50px;
+	letter-spacing:30px;
 }
 
 </style>

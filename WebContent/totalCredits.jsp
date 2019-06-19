@@ -28,10 +28,17 @@ body{
 	float:left;
 }
 
+.divSpan{
+	margin-top: 20px;
+	margin-right: 150px;
+	font-size: 25px;
+	letter-spacing:3px;
+}
+
 #tabDiv{
 	width: 1200px;
 	margin-left:280px;
-	margin-top: 75px;
+	margin-top: 25px;
 	/*border: 2px solid green;*/
 }
 #tabDiv td{
@@ -67,6 +74,7 @@ table tr:nth-child(even){
 	<div class="left">
 		<jsp:include page="left.jsp"></jsp:include>
 	</div>
+	<div class="divSpan"><span>总学分比例统计表</span></div>
 	<div>
 		<%
 			request.setCharacterEncoding("utf-8");

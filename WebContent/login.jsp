@@ -42,6 +42,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     display: block;
+    border-radius:20px;
 }
 
 .login-input-box{
@@ -81,10 +82,12 @@ body{
 
 .login-input-box .icon.icon-user{
     background: url("images/user.png");
+    background-size:100% 100%;
 }
 
 .login-input-box .icon.icon-password{
     background: url("images/password.png");
+    background-size:100% 100%;
 }
 
 

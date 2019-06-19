@@ -36,6 +36,11 @@ body{
 .formDiv input{
 	margin-left: 10px;
 }
+
+#sub{
+	width: 100px;
+	height: 50px;
+}
 </style>
 </head>
 <body>
@@ -57,7 +62,7 @@ body{
 			课程性质:<input type="text" name="courseNature" /><br/><br/>
 			考核方式:<input type="text" name="courseExam" />&nbsp;&nbsp;&nbsp;
 			承担单位:<input type="text" name="courseCollege" /><br/><br/>
-			<input type="submit" value="更新"/>
+			<input type="submit" value="添加数据" id="sub"/>
 		</form>
 	</div>
 	<%
@@ -69,27 +74,27 @@ body{
 			//跳转回登录页面
 			response.sendRedirect("login.jsp");
 		}
-		//定义课程对象
-		Course course = new Course();
-		//定义课程操作对象
-		CourseDao courDao = new CourseDao();
-		//数据转换对象
-		CTOE to = new CTOE();
-		course.setCourseId(request.getParameter("courseId"));
-		course.setCourseName(request.getParameter("courseName"));
-		course.setCourseScore(request.getParameter("courseScore"));
-		course.setCourseTheory(request.getParameter("courseTheory"));
-		course.setCourseTest(request.getParameter("courseTest"));
-		course.setCourseTime(request.getParameter("courseTime"));
-		course.setCourseKind(request.getParameter("courseKind"));
-		course.setCourseNature(request.getParameter("courseNature"));
-		course.setCourseExam(request.getParameter("courseExam"));
-		course.setCourseCollege(request.getParameter("courseCollege"));
-		if(course.getCourseId() != null){
+		if(request.getParameter("courseId") != null){
+			//定义课程对象
+			Course course = new Course();
+			//定义课程操作对象
+			CourseDao courDao = new CourseDao();
+			//数据转换对象
+			CTOE to = new CTOE();
+			course.setCourseId(request.getParameter("courseId"));
+			course.setCourseName(request.getParameter("courseName"));
+			course.setCourseScore(request.getParameter("courseScore"));
+			course.setCourseTheory(request.getParameter("courseTheory"));
+			course.setCourseTest(request.getParameter("courseTest"));
+			course.setCourseTime(request.getParameter("courseTime"));
+			course.setCourseKind(request.getParameter("courseKind"));
+			course.setCourseNature(request.getParameter("courseNature"));
+			course.setCourseExam(request.getParameter("courseExam"));
+			course.setCourseCollege(request.getParameter("courseCollege"));
 			if(courDao.Add(course)){
-		    	 out.println("<script>alert('插入成功！');history.go(-1);</script>");
+				out.println("<script>alert('增加数据成功！');history.go(-1);</script>");
 			}else{
-				out.println("<script>alert('插入失败！');history.go(-1);</script>");
+				out.println("<script>alert('增加数据失败！');history.go(-1);</script>");
 			}
 		}
 	%>

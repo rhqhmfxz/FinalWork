@@ -29,6 +29,7 @@ body{
 	float:left;
 }
 
+
 .right{
 	width:400px;
 	margin-top: 20px;
@@ -76,10 +77,9 @@ table tr:nth-child(even){
 	<div class="left">
 		<jsp:include page="left.jsp"></jsp:include>
 	</div>
-	<!-- 设置下面的CSS -->
 	<div class="right">
 		<form method="post">
-			请输入课程名称:<input type="text" name="courseName"/>
+			请输入课程名称:&nbsp;&nbsp;&nbsp;<input type="text" name="courseName"/>
 			<input type="submit" value="查询"/> 
 		</form>
 	</div>

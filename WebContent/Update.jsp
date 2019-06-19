@@ -40,6 +40,11 @@ body{
 .formDiv input{
 	margin-left: 10px;
 }
+
+#sub{
+	width: 100px;
+	height: 50px;
+}
 </style>
 </head>
 <body>
@@ -153,7 +158,7 @@ body{
 			课程性质:<input type="text" name="courseNature" value="<%= courseNature%>"/><br/><br/>
 			考核方式:<input type="text" name="courseExam" value="<%= courseExam%>"/>&nbsp;&nbsp;&nbsp;
 			承担单位:<input type="text" name="courseCollege" value="<%= courseCollege%>"/><br/><br/>
-			<input type="submit" value="更新"/>
+			<input type="submit" value="更新数据" id="sub"/>
 		</form>
 	</div>
 </body>

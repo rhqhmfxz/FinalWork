@@ -29,10 +29,17 @@ body{
 	float:left;
 }
 
+.divSpan{
+	margin-top: 20px;
+	margin-right: 150px;
+	font-size: 25px;
+	letter-spacing:3px;
+}
+
 #tabDiv{
 	width: 900px;
 	margin-left:450px;
-	margin-top: 75px;
+	margin-top: 25px; 
 	/*border: 2px solid green;*/
 }
 #tabDiv td{
@@ -68,6 +75,7 @@ table tr:nth-child(even){
 	<div class="left">
 		<jsp:include page="left.jsp"></jsp:include>
 	</div>
+	<div class="divSpan"><span>按考核方式查看</span></div>
 	<%
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
