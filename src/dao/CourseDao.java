@@ -136,7 +136,7 @@ public class CourseDao {
 		return timeSet;
 	}
 	
-	//根据课程开课时间进行数据排序
+	//根据课程学分进行数据排序
 	public List<Course> sortByScore(){
 		//定义接受查询到的数据的载体
 		List<Course> scoreSet = new ArrayList<Course>();
@@ -178,7 +178,7 @@ public class CourseDao {
 		return scoreSet;
 	}
 	
-	//根据课程开课时间进行数据排序
+	//根据课程考试方式进行数据排序
 	public List<Course> sortByExam(){
 		//定义接受查询到的数据的载体
 		List<Course> examSet = new ArrayList<Course>();

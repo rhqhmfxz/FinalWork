@@ -17,6 +17,7 @@ public class UserDao {
 		try {
 			 // 连接数据库 
 			 dbc = new DataBaseConnection();
+			 //执行SQL语句
 			 pstmt = dbc.getConnection().prepareStatement(sql);
 			 pstmt.setString(1, userName);
 			 // 进行数据库查询操作  

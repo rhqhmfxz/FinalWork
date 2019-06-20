@@ -115,6 +115,7 @@ table tr:nth-child(even){
 			//定义课程操作对象
 			CourseDao courDao = new CourseDao();
 			List<Course> idSet = new ArrayList<Course>();
+			//数据格式化
 			EqualsCourse eqCourse = new EqualsCourse();
 			idSet = courDao.queryById(courseId);
 			//使用课程迭代器
