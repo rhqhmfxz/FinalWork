@@ -37,7 +37,7 @@ public class LoginFilter implements javax.servlet.Filter {
 			chain.doFilter(servletRequest, servletResponse);
 			return;
 		}
-		// 判断如果没有取到员工信息,就跳转到登陆页面
+		// 判断如果没有用户信息,就跳转到登陆页面
 		if (empId == null || "".equals(empId)) {
 			// 跳转到登陆页面
 			servletResponse.sendRedirect("/login.jsp");
